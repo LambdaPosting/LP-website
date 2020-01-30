@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<title>Hλlf-Life Lambdaposting</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="ContentType" content="text/html"; charset="UTF-8">
+	
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+	
+	<!-- js -->
+	<script>
+	function sprava() {
+	alert("Website by mirzi");
+	}
+	</script>
+	
+	<!-- internal css -->
+	<style>
+	html
+	{
+	overflow-x:hidden;
+	height: 100%
+	}
+	
+	body
+	{
+	background-color: black;
+	background: url("bg.png");
+	background-size: 100% 100%;
+	}
+
+	.title1
+	{
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	padding:20px 0px;
+	animation: move 4s infinite linear;
+	transform:translateX(0px);
+	letter-spacing: 10px;
+	}
+	
+	span
+	{
+	position: absolute;
+	font-size: 10px;
+	filter: blur(2px);
+	transform: scale(7) translateX(0px);
+	top: 65px;
+	animation: move1 4s infinite linear;
+	left: 400px;
+	}
+
+	th
+	{
+	font-size: 20px;
+	color: #FFBA00;
+	padding-bottom:20px;
+	text-align: left;
+	font-family: Trebuchet MS;
+	}
+	
+	a
+	{
+	cursor: default;
+	color: #FFBA00;
+	text-decoration: none;
+	transition-duration: 0.5s;
+	}
+	
+	a:hover
+	{
+	color: #FFF94D;
+	text-shadow: 0px 0px 5px #FFBA00;
+	text-decoration: none;
+	transition-duration: 0.02s;
+	}
+	
+	a:active
+	{
+	color: #FFF94D;
+	text-shadow: 0px 0px 20px #FFBA00;
+	text-decoration: none;
+	transition-duration: 0.10s;
+	}
+
+	td
+	{
+	font-size: 15px;
+	color: #7F7F7F;
+	padding-bottom:20px;
+	font-family: Arial;
+	}
+	
+	.bottomtext
+	{
+	color: #7F7F7F;
+	}
+	
+	@media screen and (max-width: 800px) {
+	
+	.title1
+	{
+	font-size: 20px;
+	padding:0px 0px;
+	animation: none;
+	}
+	
+	span
+	{
+	display:none;
+	}
+	}
+	
+	@keyframes move{
+	
+	0%{
+    transform:translateX(-50px);
+	}
+	
+	50%{
+    transform:translateX(50px);
+	}
+	
+	100%{
+    transform:translateX(-50px);
+	}
+	}
+	
+	@keyframes move1{
+	
+	0%{
+    transform:translateX(-50px) scale(7);
+	}
+	
+	50%{
+    transform:translateX(50px) scale(7);
+	}
+	
+	100%{
+    transform:translateX(-50px) scale(7);
+	}
+	}
+	
+	</style>
+</head>
+	
+<body>
+
+<audio id="click" src="click.mp3" preload="auto"></audio>
+
+<div class="container">
+
+<h1 class="title1">HλLF-LIFE LAMBDAPOSTING<span>HλLF-LIFE LAMBDAPOSTING</span></h1>
+
+<table>
+    <tr>
+      <th width=200px><a href="https://discord.gg/CrXtKY" onclick="document.getElementById('click').play();">Discord server</a></th>
+      <td valign="bottom">Join our Discord server.</td>
+    </tr>
+    <tr>
+      <th><a href="http://www.lambdaposting.games/wiki/index.php/Main_Page" onclick="document.getElementById('click').play();">Wiki</a></th>
+      <td valign="bottom">Check out the LambdaPosting Wiki.</td>
+    </tr>
+	<tr>
+      <th><a href="link here" onclick="document.getElementById('click').play();">Item 3</a></th>
+      <td valign="bottom">Description</td>
+    </tr>
+	<tr>
+      <th><a href="link here" onclick="document.getElementById('click').play();">Item 4</a></th>
+      <td valign="bottom">Description</td>
+    </tr>
+	<tr>
+      <th><a onclick="sprava();document.getElementById('click').play();">About</a></th>
+      <td valign="bottom">About this website.</td>
+    </tr>
+</table>
+</div>
+</body>
