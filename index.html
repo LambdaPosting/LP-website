@@ -6,7 +6,6 @@
 	<title>Hλlf-Life Lambdaposting</title>
 	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="ContentType" content="text/html"; charset="UTF-8">
 	<meta property="og:title" content="Half-Life LambdaPosting">
 	<meta property="og:description" content="The official LambdaPosting website">
 	<meta property="og:image" content="http://lambdaposting.games/lambdaposting.jpg">
@@ -18,8 +17,14 @@
 	
 	<!-- js -->
 	<script>
-	function aboutAlert() {
-	alert("Website by mirzi");
+	function showAlert() {
+	var x = document.getElementById("messagebox");
+    x.style.visibility = "visible";
+	}
+	
+	function hideAlert() {
+	var x = document.getElementById("messagebox");
+    x.style.visibility = "hidden";
 	}
 	</script>
 	
@@ -38,7 +43,7 @@
 	background-size: 100% 100%;
 	}
 
-	.title1
+	#title1
 	{
 	font-size: 50px;
 	text-align: center;
@@ -49,7 +54,7 @@
 	letter-spacing: 10px;
 	}
 	
-	span
+	#title1 span
 	{
 	position: absolute;
 	font-size: 10px;
@@ -60,13 +65,23 @@
 	left: 400px;
 	}
 
-	th
+	#menu th
 	{
 	font-size: 20px;
 	color: #FFBA00;
 	padding-bottom:20px;
 	text-align: left;
 	font-family: Trebuchet MS;
+	width: 200px; 
+	}
+	
+	#menu td
+	{
+	font-size: 15px;
+	color: #7F7F7F;
+	padding-bottom:20px;
+	font-family: Arial;
+	vertical-align: bottom;
 	}
 	
 	a
@@ -74,48 +89,78 @@
 	cursor: default;
 	color: #FFBA00;
 	text-decoration: none;
-	transition-duration: 0.5s;
+	transition-duration: 1s;
 	}
 	
 	a:hover
 	{
 	color: #FFF94D;
-	text-shadow: 0px 0px 5px #FFBA00;
+	text-shadow: 0px 0px 5px #FFBA00, 0px 0px 10px #FFBA00;
 	text-decoration: none;
 	transition-duration: 0.02s;
 	}
 	
 	a:active
 	{
-	color: #FFF94D;
-	text-shadow: 0px 0px 20px #FFBA00;
+	color: #000;
 	text-decoration: none;
-	transition-duration: 0.10s;
+	transition-duration: 0.02s;
 	}
-
-	td
+	
+	#messagebox
 	{
-	font-size: 15px;
-	color: #7F7F7F;
-	padding-bottom:20px;
-	font-family: Arial;
+	width:320px;
+	height:160px;
+	background-color: #383838;
+	border: 1px solid #646464;
+	position:fixed;
+	top: 200px;
+	left: calc(50% - 160px);
+	text-align: center;
+	color: #FFBA00;
+	visibility: hidden;
+	}
+	
+	#messagebox th
+	{
+	font-size: 18px;
+	}
+	
+	#messagebox a
+	{
+	font-size: 16px;
+	font-family: Trebuchet MS;
+	font-weight: normal;
+	}
+	
+	#messagebox #okbutton
+	{
+	height: 40px;
 	}
 	
 	@media screen and (max-width: 800px) {
 	
-	.title1
+	#title1
 	{
 	font-size: 20px;
 	padding:0px 0px;
 	animation: none;
 	}
 	
-	span
+	#title1 span
 	{
 	display:none;
 	}
-	}
 	
+	#messagebox
+	{
+	width:160px;
+	height:80px;
+	top: 100px;
+	left: calc(50% - 80px);
+	}
+	}
+
 	@keyframes move{
 	
 	0%{
@@ -145,7 +190,7 @@
     transform:translateX(-50px) scale(7);
 	}
 	}
-	
+
 	</style>
 </head>
 	
@@ -155,29 +200,39 @@
 
 <div class="container">
 
-<h1 class="title1">HλLF-LIFE LAMBDAPOSTING<span>HλLF-LIFE LAMBDAPOSTING</span></h1>
+<h1 id="title1">HλLF-LIFE LAMBDAPOSTING<span>HλLF-LIFE LAMBDAPOSTING</span></h1>
 
-<table>
+<table id="menu">
     <tr>
-      <th width=200px><a href="https://discord.gg/CrXtKY" onclick="document.getElementById('click').play();">Discord server</a></th>
-      <td valign="bottom">Join our Discord server</td>
+      <th><a href="https://discord.gg/CrXtKY" onclick="document.getElementById('click').play();">Discord server</a></th>
+      <td>Join our Discord server</td>
     </tr>
     <tr>
       <th><a href="https://www.facebook.com/groups/408658379533410/" onclick="document.getElementById('click').play();">Facebook group</a></th>
-      <td valign="bottom">Visit our Facebook group</td>
+      <td>Visit our Facebook group</td>
     </tr>
     <tr>
       <th><a href="https://www.facebook.com/lambdaposting/" onclick="document.getElementById('click').play();">Facebook page</a></th>
-      <td valign="bottom">Check out our Facebook page</td>
+      <td>Check out our Facebook page</td>
     </tr>
     <tr>
       <th><a href="https://wiki.lambdaposting.games/" onclick="document.getElementById('click').play();">Wiki</a></th>
-      <td valign="bottom">Check out the LambdaPosting Wiki</td>
+      <td>Check out the LambdaPosting Wiki</td>
     </tr>
 	<tr>
-      <th><a onclick="aboutAlert();document.getElementById('click').play();">About</a></th>
-      <td valign="bottom">About this website</td>
+      <th><a onclick="showAlert();document.getElementById('click').play();">About</a></th>
+      <td>About this website</td>
     </tr>
 </table>
+
+<table id="messagebox">
+    <tr>
+      <th>Website by mirzi</th>
+    </tr>
+    <tr>
+      <th id="okbutton"><a onclick="hideAlert();document.getElementById('click').play();">Ok</a></th>
+    </tr>
+</table>
+
 </div>
 </body>
