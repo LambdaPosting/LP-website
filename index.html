@@ -15,21 +15,17 @@
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="bootstrap.min.css">
 	<!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
-
+	
 	<!-- js -->
 	<script>
 	function showAlert() {
 	var x = document.getElementById("messagebox");
-	var y = document.getElementById("githublink");
-	x.style.visibility = "visible";
-	y.style.display = "inline";
+    x.style.visibility = "visible";
 	}
 	
 	function hideAlert() {
 	var x = document.getElementById("messagebox");
-	var y = document.getElementById("githublink");
-	x.style.visibility = "hidden";
-	y.style.display = "none";
+    x.style.visibility = "hidden";
 	}
 	</script>
 	
@@ -91,37 +87,42 @@
 	padding-bottom:20px;
 	font-family: Arial;
 	vertical-align: bottom;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
 	
 	a
 	{
 	cursor: default;
-	color: #FFBA00;
+	color: #FFDC68;
 	text-decoration: none;
-	transition-duration: 1s;
+	opacity: 0.8;
+	filter: blur(0.7px);
 	}
 	
 	a:hover
 	{
-	color: #FFF94D;
-	text-shadow: 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 15px #FFBA00;
+	color: #FFDC68;
+	text-shadow: 0px 0px 5px #FFFF3B, 0px 0px 10px #FFDC68;
 	text-decoration: none;
-	transition-duration: 0.02s;
+	opacity: 1;
+	filter: blur(3px) saturate(8);
 	}
 	
 	a:active
 	{
 	color: #000;
+	text-shadow: 0px 0px 5px #FFFF3B, 0px 0px 10px #FFDC68;
 	text-decoration: none;
-	transition-duration: 0.02s;
+	filter: blur(0px) saturate(8);
 	}
 		
 	a:focus
 	{
-	color: #FFF94D;
-	text-shadow: 0px 0px 5px #FFBA00, 0px 0px 10px #FFBA00;
+	color: #FFDC68;
+	text-shadow: 0px 0px 5px #FFFF3B, 0px 0px 10px #FFDC68;
 	text-decoration: none;
-	transition-duration: 0.02s;
+	opacity: 1;
+	filter: blur(3px) saturate(8);
 	}
 		
 	.inactive
@@ -132,26 +133,23 @@
 	
 	#messagebox
 	{
-	width:320px;
+	width:360px;
 	height:160px;
 	background-color: #383838;
-	border: 1px solid #646464;
 	position:fixed;
 	top: 200px;
 	left: calc(50% - 160px);
 	text-align: center;
-	color: #FFBA00;
 	visibility: hidden;
-	}
-		
-	#githublink
-	{
-	display:none;
 	}
 	
 	#messagebox th
 	{
+	color: #F0B418;
 	font-size: 18px;
+	text-shadow: 2px 2px #000;
+	letter-spacing: 4px;
+	font-family: Arial Narrow;
 	}
 	
 	#messagebox a
@@ -159,6 +157,8 @@
 	font-size: 16px;
 	font-family: Trebuchet MS;
 	font-weight: normal;
+	text-shadow: none;
+	letter-spacing: normal;
 	}
 	
 	#messagebox #okbutton
@@ -236,39 +236,39 @@
 
 <table id="menu">
     <tr>
-      <th><a href="https://discord.gg/xMkHHxt" onclick="document.getElementById('click').play();"><u>D</u>iscord server</a></th>
+      <th><a href="https://discord.gg/xMkHHxt" onclick="document.getElementById('click').play();">Discord server</a></th>
       <td>Join our Discord server</td>
     </tr>
     <tr>
-      <th><a class="inactive" href="steam://connect/serverIP" onclick="document.getElementById('click').play();"><u>M</u>ultiplayer</a></th>
+      <th><a class="inactive" href="steam://connect/serverIP" onclick="document.getElementById('click').play();">Multiplayer</a></th>
       <td>This button becomes active when an event is taking place.</td>
     </tr>
     <tr>
-      <th><a href="https://www.facebook.com/groups/408658379533410/" onclick="document.getElementById('click').play();"><u>F</u>acebook group</a></th>
+      <th><a href="https://www.facebook.com/groups/408658379533410/" onclick="document.getElementById('click').play();">Facebook group</a></th>
       <td>Visit our Facebook group</td>
     </tr>
     <tr>
-      <th><a href="https://www.facebook.com/lambdaposting/" onclick="document.getElementById('click').play();">Facebook <u>p</u>age</a></th>
+      <th><a href="https://www.facebook.com/lambdaposting/" onclick="document.getElementById('click').play();">Facebook page</a></th>
       <td>Check out our Facebook page</td>
     </tr>
     <tr>
-      <th><a href="https://wiki.lambdaposting.games/" onclick="document.getElementById('click').play();"><u>W</u>iki</a></th>
+      <th><a href="https://wiki.lambdaposting.games/" onclick="document.getElementById('click').play();">Wiki</a></th>
       <td>Check out the LambdaPosting Wiki</td>
     </tr>
     <tr>
-    	<th><a href="https://github.com/LambdaPosting" onclick="document.getElementById('click').play();"><u>G</u>itHub</th>
+    	<th><a href="https://github.com/LambdaPosting" onclick="document.getElementById('click').play();">GitHub</th>
     		<td>Source code for this webpage and our other projects</td>
     </tr>
     <tr>
-    	<th><a href="https://gbook.lambdaposting.games/" onclick="document.getElementById('click').play();">Gues<u>t</u> Book</th>
+    	<th><a href="https://gbook.lambdaposting.games/" onclick="document.getElementById('click').play();">Guest Book</th>
     	<td><a href="https://github.com/Czechball/twa-guestbook">Czechball's LambdaPosting Guest Book</a> (the website is a homework don't take it seriously thx)</td>
     </tr>
     <tr>
-    	<th><a href="https://www.patreon.com/LambdaPosting" onclick="document.getElementById('click').play();">Pat<u>r</u>eon</a></th>
+    	<th><a href="https://www.patreon.com/LambdaPosting" onclick="document.getElementById('click').play();">Patreon</a></th>
     	<td>Support us on Patreon!</td>
     </tr>
 	<tr>
-      <th><a onclick="showAlert();document.getElementById('click').play();"><u>A</u>bout</a></th>
+      <th><a onclick="showAlert();document.getElementById('click').play();">About</a></th>
       <td>About this website</td>
     </tr>
 </table>
@@ -278,7 +278,7 @@
       <th>Website by mirzi and Czechball</th>
     </tr>
     <tr>
-    	<th id="githublink"><a href="https://github.com/LambdaPosting/LP-website"  onclick="document.getElementById('click').play();">Source code available on GitHub</a></th>
+    	<th><a href="https://github.com/LambdaPosting/LP-website"  onclick="document.getElementById('click').play();">Source code available on GitHub</a></th>
     </tr>
     <tr>
       <th id="okbutton"><a onclick="hideAlert();document.getElementById('click').play();">Ok</a></th>
