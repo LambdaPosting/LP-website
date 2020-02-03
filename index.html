@@ -119,6 +119,12 @@
 	text-decoration: none;
 	transition-duration: 0.02s;
 	}
+		
+	.inactive
+	{
+	color: #7F7F7F;
+	pointer-events: none;
+	}
 	
 	#messagebox
 	{
@@ -226,6 +232,10 @@
     <tr>
       <th><a href="https://discord.gg/xMkHHxt" onclick="document.getElementById('click').play();">Discord server</a></th>
       <td>Join our Discord server</td>
+    </tr>
+    <tr>
+      <th><a class="inactive" href="steam://connect/serverIP" onclick="document.getElementById('click').play();">Multiplayer</a></th>
+      <td>Join the event server</td>
     </tr>
     <tr>
       <th><a href="https://www.facebook.com/groups/408658379533410/" onclick="document.getElementById('click').play();">Facebook group</a></th>
