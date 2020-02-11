@@ -61,6 +61,29 @@
 	y.style.display = "none";
 	z.style.display = "none";
 	}
+	
+	function showAlertMc() {
+	var x = document.getElementById("messagebox_mc");
+	var y = document.getElementById("copybutton");
+	var z = document.getElementById("okbutton");
+	x.style.visibility = "visible";
+	y.style.display = "inline";
+	z.style.display = "inline";
+	}
+	
+	function hideAlertMc() {
+	var x = document.getElementById("messagebox_mc");
+	var y = document.getElementById("copybutton");
+	var z = document.getElementById("okbutton");
+	x.style.visibility = "hidden";
+	y.style.display = "none";
+	z.style.display = "none";
+	}
+	
+	function copyIP(){
+	var text = "mc.lambdaposting.games";
+	navigator.clipboard.writeText(text);
+	}
 	</script>
 	
 	<!-- internal css -->
@@ -170,7 +193,7 @@
 	}
 	
 	/* message box container */
-	#messagebox
+	#messagebox, #messagebox_mc
 	{
 	width:320px;
 	height:160px;
@@ -183,12 +206,12 @@
 	color: #FFBA00;
 	visibility: hidden;
 	}
-
+	
 	/* message box message */
-	#messagebox th{font-size: 18px;}
+	#messagebox th, #messagebox_mc th{font-size: 18px;}
 	
 	/* message box link */
-	#messagebox a
+	#messagebox a, #messagebox_mc a
 	{
 	font-size: 16px;
 	font-family: Trebuchet MS;
@@ -196,7 +219,7 @@
 	}
 	
 	/* messagebox ok button */
-	#messagebox #okbutton
+	#messagebox #okbutton, #messagebox_mc #okbutton
 	{
 	height: 40px;
 	}
@@ -216,7 +239,7 @@
 	#title1 span{display:none;}
 	
 	/* move message box higher */
-	#messagebox{top: 100px;}
+	#messagebox, #messagebox_mc{top: 100px;}
 	}
 
 	/* title animation */
@@ -350,6 +373,10 @@
       <th><a class="inactive" href="steam://connect/serverIP" onclick="document.getElementById('click').play();"><u>M</u>ultiplayer</a></th>
       <td>This button becomes active when an event is taking place.</td>
     </tr>
+	<tr>
+      <th><a onclick="showAlertMc(); document.getElementById('click').play();">Minecraft server</a></th>
+      <td>Join our Minecraft server</td>
+    </tr>
     <tr>
       <th><a href="https://www.facebook.com/groups/408658379533410/" onclick="document.getElementById('click').play();"><u>F</u>acebook group</a></th>
       <td>Visit our Facebook group</td>
@@ -385,7 +412,22 @@
     	<th id="githublink"><a href="https://github.com/LambdaPosting/LP-website"  onclick="document.getElementById('click').play();">Source code available on GitHub</a></th>
     </tr>
     <tr>
-      <th id="okbutton"><a onclick="hideAlert();document.getElementById('click').play();">Ok</a></th>
+      <th id="okbutton"><a onclick="hideAlert();document.getElementById('click').play();"><br>Ok</a></th>
+    </tr>
+</table>
+
+<table id="messagebox_mc">
+    <tr>
+      <th>Join our Minecraft server!</th>
+    </tr>
+    <tr>
+      <th>IP: mc.lambdaposting.games</th>
+    </tr>
+	<tr>
+      <th id="copybutton"><a onclick="copyIP();document.getElementById('click').play();">Copy to clipboard</a></th>
+    </tr>
+    <tr>
+      <th id="okbutton"><a onclick="hideAlertMc();document.getElementById('click').play();">Ok</a></th>
     </tr>
 </table>
 
