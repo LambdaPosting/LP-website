@@ -25,6 +25,10 @@
 		if (e.keyCode == 68) location='https://discord.gg/xMkHHxt';
 		//M - Multiplayer - activate only on events
 		//addEventListener('keyup', function(e) { if (e.keyCode == 77) location='placeholder'});
+		//I - Minecraft server dialog
+		if (e.keyCode == 73) showAlertMc();
+		//ESC - Close the Minecraft server dialog
+		if (e.keyCode == 27) hideAlertMc();
 		//F - Facebook group
 		if (e.keyCode == 70) location='https://www.facebook.com/groups/408658379533410/';
 		//P - Facebook page
@@ -374,7 +378,7 @@
       <td>This button becomes active when an event is taking place.</td>
     </tr>
 	<tr>
-      <th><a onclick="showAlertMc(); document.getElementById('click').play();">Minecraft server</a></th>
+      <th><a onclick="showAlertMc(); document.getElementById('click').play();">M<u>i</u>necraft server</a></th>
       <td>Join our Minecraft server</td>
     </tr>
     <tr>
