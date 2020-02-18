@@ -3,8 +3,8 @@
 
 <head>
 	
-	<!-- meta tags -->
-	<title>Hλlf-Life Lambdaposting</title>
+	<!-- META TAGS -->
+	<title>Hλlf-Life LambdaPosting</title>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,347 +13,27 @@
 	<meta property="og:image" content="https://lambdaposting.games/lambdaposting.jpg">
 	<meta property="og:url" content="https://lambdaposting.games/index.html">
 	
-	<!-- bootstrap -->
+	<!-- CSS -->
+	<!-- bootstrap (only used for responsivity and might not be necessary in the future)-->
 	<link rel="stylesheet" href="bootstrap.min.css">
-	<!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+	<!-- external stylesheet -->
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	
+	<!-- JAVASCRIPT -->
 	<!-- shortcut key script -->
-	<script type="text/javascript">
-		addEventListener('keyup', function(e) { 
-		document.getElementById('click').play();
-		//D - Discord
-		if (e.keyCode == 68) location='https://discord.gg/xMkHHxt';
-		//M - Multiplayer - activate only on events
-		//addEventListener('keyup', function(e) { if (e.keyCode == 77) location='placeholder'});
-		//I - Minecraft server dialog
-		if (e.keyCode == 73) showAlertMc();
-		//ESC - Close the Minecraft server dialog
-		if (e.keyCode == 27) hideAlertMc();
-		//F - Facebook group
-		if (e.keyCode == 70) location='https://www.facebook.com/groups/408658379533410/';
-		//P - Facebook page
-		if (e.keyCode == 80) location='https://www.facebook.com/lambdaposting/';
-		//W - Wiki
-		if (e.keyCode == 87) location='https://wiki.lambdaposting.games';
-		//G - GitHub
-		if (e.keyCode == 71) location='https://github.com/LambdaPosting';
-		//R - Patreon
-		if (e.keyCode == 82) location='https://www.patreon.com/LambdaPosting';
-		//A - About
-		if (e.keyCode == 65) showAlert();
-		//ESC - Close the About box
-		if (e.keyCode == 27) hideAlert();
-		});
-	</script>
+	<script src="alerts.js"></script>
+	<!-- alerts script -->
+	<script src="key_shortcuts.js"></script>
 	
-	<!-- show/hide alert scripts -->
-	<script>
-	function showAlert() {
-	var x = document.getElementById("messagebox");
-	var y = document.getElementById("githublink");
-	var z = document.getElementById("okbutton");
-	x.style.visibility = "visible";
-	y.style.display = "inline";
-	z.style.display = "inline";
-	}
-	
-	function hideAlert() {
-	var x = document.getElementById("messagebox");
-	var y = document.getElementById("githublink");
-	var z = document.getElementById("okbutton");
-	x.style.visibility = "hidden";
-	y.style.display = "none";
-	z.style.display = "none";
-	}
-	
-	function showAlertMc() {
-	var x = document.getElementById("messagebox_mc");
-	var y = document.getElementById("copybutton");
-	var z = document.getElementById("okbutton");
-	x.style.visibility = "visible";
-	y.style.display = "inline";
-	z.style.display = "inline";
-	}
-	
-	function hideAlertMc() {
-	var x = document.getElementById("messagebox_mc");
-	var y = document.getElementById("copybutton");
-	var z = document.getElementById("okbutton");
-	x.style.visibility = "hidden";
-	y.style.display = "none";
-	z.style.display = "none";
-	}
-	
-	function copyIP(){
-	var text = "mc.lambdaposting.games";
-	navigator.clipboard.writeText(text);
-	}
-	</script>
-	
-	<!-- internal css -->
-	<style>
-	html
-	{
-	overflow-x:hidden;
-	height: 100%;
-	-webkit-user-select: none; /* Safari */        
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+/Edge */
-	user-select: none; /* Standard */
-	}
-	
-	body
-	{
-	background-color: black;
-	background: url("bg.png");
-	background-size:cover;
-	}
-
-	/* title text */
-	#title1
-	{
-	font-size: 50px;
-	text-align: center;
-	color: white;
-	padding:20px 0px;
-	animation: move 4.6s infinite linear, blink 4.6s infinite linear, blinkblur 4.6s infinite linear;
-	transform:translateX(0px);
-	letter-spacing: 10px;
-	}
-	
-	/* title blurry text */
-	#title1 span
-	{
-	position: absolute;
-	font-size: 10px;
-	filter: blur(1px);
-	transform: scale(7) translateX(0px);
-	top: 65px;
-	animation: movescale 4.6s infinite linear, blink 4.6s infinite linear;
-	left: 400px;
-	}
-
-	/* menu button */
-	#menu th
-	{
-	font-size: 20px;
-	color: #FFBA00;
-	padding-bottom:20px;
-	text-align: left;
-	font-family: Trebuchet MS;
-	width: 200px; 
-	}
-	
-	/* menu button description */
-	#menu td
-	{
-	font-size: 15px;
-	color: #7F7F7F;
-	padding-bottom:20px;
-	font-family: Arial;
-	vertical-align: bottom;
-	}
-	
-	/* links */
-	a
-	{
-	cursor: default;
-	color: #FFBA00;
-	text-decoration: none;
-	transition-duration: 1s;
-	}
-	
-	/* link hover */
-	a:hover
-	{
-	color: #FFF94D;
-	text-shadow: 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 15px #FFBA00;
-	text-decoration: none;
-	transition-duration: 0.02s;
-	}
-	
-	/* link active (clicked) */
-	a:active
-	{
-	color: #000;
-	text-decoration: none;
-	transition-duration: 0.02s;
-	}
-	
-	/* fix for ugly blue links */
-	a:focus
-	{
-	color: #000;
-	text-shadow: 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 15px #FFBA00;
-	text-decoration: none;
-	transition-duration: 0.02s;
-	}
-	
-	/* inactive link */
-	.inactive
-	{
-	color: #7F7F7F;
-	pointer-events: none;
-	}
-	
-	/* message box container */
-	#messagebox, #messagebox_mc
-	{
-	width:320px;
-	height:160px;
-	background-color: #383838;
-	border: 1px solid #646464;
-	position:fixed;
-	top: 200px;
-	left: calc(50% - 160px);
-	text-align: center;
-	color: #FFBA00;
-	visibility: hidden;
-	}
-	
-	/* message box message */
-	#messagebox th, #messagebox_mc th{font-size: 18px;}
-	
-	/* message box link */
-	#messagebox a, #messagebox_mc a
-	{
-	font-size: 16px;
-	font-family: Trebuchet MS;
-	font-weight: normal;
-	}
-	
-	/* messagebox ok button */
-	#messagebox #okbutton, #messagebox_mc #okbutton
-	{
-	height: 40px;
-	}
-	
-	/* css for mobile devices */
-	@media screen and (max-width: 800px) {
-	
-	/* smaller title without and animation */
-	#title1
-	{
-	font-size: 20px;
-	padding:0px 0px;
-	animation: none;
-	}
-	
-	/* disable blurry title */
-	#title1 span{display:none;}
-	
-	/* move message box higher */
-	#messagebox, #messagebox_mc{top: 100px;}
-	}
-
-	/* title animation */
-	@keyframes move{
-	
-	0%{transform:translateX(-50px);}
-	
-	27%{transform:translateX(50px);}
-	
-	36%{transform:translateX(25px);}
-	
-	45%{transform:translateX(50px);}
-	
-	81%{transform:translateX(0px);}
-	
-	94%{transform:translateX(50px);}
-	
-	100%{transform:translateX(-50px);}
-	}
-	
-	/* title scaled animation */
-	@keyframes movescale{
-	
-	0%{transform:translateX(-50px) scale(7);}
-	
-	27%{transform:translateX(50px) scale(7);}
-	
-	36%{transform:translateX(25px) scale(7);}
-	
-	45%{transform:translateX(50px) scale(7);}
-	
-	81%{transform:translateX(0px) scale(7);}
-	
-	94%{transform:translateX(50px) scale(7);}
-	
-	100%{transform:translateX(-50px) scale(7);}
-	}
-	
-	/* blinking animation */
-	@keyframes blink{
-	
-	0%{text-shadow: none;}
-	
-	11%{text-shadow: none;}
-	12%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	13%{text-shadow: none;}
-	
-	31%{text-shadow: none;}
-	32%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	33%{text-shadow: none;}
-	
-	54%{text-shadow: none;}
-	55%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	56%{text-shadow: none;}
-	
-	66%{text-shadow: none;}
-	67%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	68%{text-shadow: none;}
-	
-	77%{text-shadow: none;}
-	78%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	79%{text-shadow: none;}
-	
-	93%{text-shadow: none;}
-	94%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	95%{text-shadow: none;}
-	
-	100%{text-shadow: none;}
-	}
-	
-	/* blinking blur animation */
-	@keyframes blinkblur{
-	
-	0%{filter:blur(0px);}
-	
-	11%{filter:blur(0px);}
-	12%{filter:blur(5px);}
-	13%{filter:blur(0px);}
-	
-	31%{filter:blur(0px);}
-	32%{filter:blur(5px);}
-	33%{filter:blur(0px);}
-	
-	54%{filter:blur(0px);}
-	55%{filter:blur(5px);}
-	56%{filter:blur(0px);}
-	
-	66%{filter:blur(0px);}
-	67%{filter:blur(5px);}
-	68%{filter:blur(0px);}
-	
-	77%{filter:blur(0px);}
-	78%{filter:blur(5px);}
-	79%{filter:blur(0px);}
-	
-	93%{filter:blur(0px);}
-	94%{filter:blur(5px);}
-	95%{filter:blur(0px);}
-	
-	100%{filter:blur(0px);}
-	}
-
-	</style>
+	<!-- discord icon in the lower right -->
 	<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-	new Crate({
-    server:	'302903220685242368',
-    channel:'481141299718782977',
-    shard: 'https://disweb.dashflo.net'
-  			})
+		new Crate({
+		server:	'302903220685242368',
+		channel:'481141299718782977',
+		shard: 'https://disweb.dashflo.net'
+  		})
 	</script>
+	
 </head>
 	
 <body>
@@ -364,77 +44,77 @@
 <!-- website container -->
 <div class="container">
 
-<!-- title with animation -->
-<h1 id="title1">HλLF-LIFE LAMBDAPOSTING<span>HλLF-LIFE LAMBDAPOSTING</span></h1>
+	<!-- title with animation -->
+	<h1 id="title1">HλLF-LIFE LAMBDAPOSTING<span>HλLF-LIFE LAMBDAPOSTING</span></h1>
+	
+	<!-- menu contents -->
+	<table id="menu">
+		<tr>
+			<th><a href="https://discord.gg/xMkHHxt" onclick="clickSound();"><u>D</u>iscord server</a></th>
+			<td>Join our Discord server</td>
+		</tr>
+		<tr>
+			<th><a class="inactive" href="steam://connect/serverIP" onclick="clickSound();"><u>M</u>ultiplayer</a></th>
+			<td>This button becomes active when an event is taking place.</td>
+		</tr>
+		<tr>
+			<th><a onclick="showAlertMc(); clickSound();">M<u>i</u>necraft server</a></th>
+			<td>Join our Minecraft server</td>
+		</tr>
+		<tr>
+			<th><a href="https://www.facebook.com/groups/408658379533410/" onclick="clickSound();"><u>F</u>acebook group</a></th>
+			<td>Visit our Facebook group</td>
+		</tr>
+		<tr>
+			<th><a href="https://www.facebook.com/lambdaposting/" onclick="clickSound();">Facebook <u>p</u>age</a></th>
+			<td>Check out our Facebook page</td>
+		</tr>
+		<tr>
+			<th><a href="https://wiki.lambdaposting.games/" onclick="clickSound();"><u>W</u>iki</a></th>
+			<td>Check out the LambdaPosting Wiki</td>
+		</tr>
+		<tr>
+			<th><a href="https://github.com/LambdaPosting" onclick="clickSound();"><u>G</u>itHub</a></th>
+			<td>Source code for this webpage and our other projects</td>
+		</tr>
+		<tr>
+			<th><a href="https://www.patreon.com/LambdaPosting" onclick="clickSound();">Pat<u>r</u>eon</a></th>
+			<td>Support us on Patreon!</td>
+		</tr>
+		<tr>
+			<th><a onclick="showAlert();clickSound();"><u>A</u>bout</a></th>
+			<td>About this website</td>
+		</tr>
+	</table>
 
-<!-- menu contents -->
-<table id="menu">
-    <tr>
-      <th><a href="https://discord.gg/xMkHHxt" onclick="document.getElementById('click').play();"><u>D</u>iscord server</a></th>
-      <td>Join our Discord server</td>
-    </tr>
-    <tr>
-      <th><a class="inactive" href="steam://connect/serverIP" onclick="document.getElementById('click').play();"><u>M</u>ultiplayer</a></th>
-      <td>This button becomes active when an event is taking place.</td>
-    </tr>
-	<tr>
-      <th><a onclick="showAlertMc(); document.getElementById('click').play();">M<u>i</u>necraft server</a></th>
-      <td>Join our Minecraft server</td>
-    </tr>
-    <tr>
-      <th><a href="https://www.facebook.com/groups/408658379533410/" onclick="document.getElementById('click').play();"><u>F</u>acebook group</a></th>
-      <td>Visit our Facebook group</td>
-    </tr>
-    <tr>
-      <th><a href="https://www.facebook.com/lambdaposting/" onclick="document.getElementById('click').play();">Facebook <u>p</u>age</a></th>
-      <td>Check out our Facebook page</td>
-    </tr>
-    <tr>
-      <th><a href="https://wiki.lambdaposting.games/" onclick="document.getElementById('click').play();"><u>W</u>iki</a></th>
-      <td>Check out the LambdaPosting Wiki</td>
-    </tr>
-    <tr>
-    	<th><a href="https://github.com/LambdaPosting" onclick="document.getElementById('click').play();"><u>G</u>itHub</a></th>
-    	<td>Source code for this webpage and our other projects</td>
-    </tr>
-    <tr>
-    	<th><a href="https://www.patreon.com/LambdaPosting" onclick="document.getElementById('click').play();">Pat<u>r</u>eon</a></th>
-    	<td>Support us on Patreon!</td>
-    </tr>
-	<tr>
-      <th><a onclick="showAlert();document.getElementById('click').play();"><u>A</u>bout</a></th>
-      <td>About this website</td>
-    </tr>
-</table>
+	<!-- message box -->
+	<table id="messagebox">
+		<tr>
+			<th>Website by mirzi and Czechball</th>
+		</tr>
+		<tr>
+			<th id="githublink"><a href="https://github.com/LambdaPosting/LP-website"  onclick="clickSound();">Source code available on GitHub</a></th>
+		</tr>
+		<tr>
+			<th id="okbutton"><a onclick="hideAlert();clickSound();"><br>Ok</a></th>
+		</tr>
+	</table>
 
-<!-- message box -->
-<table id="messagebox">
-    <tr>
-      <th>Website by mirzi and Czechball</th>
-    </tr>
-    <tr>
-    	<th id="githublink"><a href="https://github.com/LambdaPosting/LP-website"  onclick="document.getElementById('click').play();">Source code available on GitHub</a></th>
-    </tr>
-    <tr>
-      <th id="okbutton"><a onclick="hideAlert();document.getElementById('click').play();"><br>Ok</a></th>
-    </tr>
-</table>
+	<table id="messagebox_mc">
+		<tr>
+			<th>Join our Minecraft server!</th>
+		</tr>
+		<tr>
+			<th>IP: mc.lambdaposting.games</th>
+		</tr>
+		<tr>
+			<th id="copybutton"><a onclick="copyIP();clickSound();">Copy to clipboard</a></th>
+		</tr>
+		<tr>
+			<th id="okbutton"><a onclick="hideAlertMc();clickSound();">Ok</a></th>
+		</tr>
+	</table>
 
-<table id="messagebox_mc">
-    <tr>
-      <th>Join our Minecraft server!</th>
-    </tr>
-    <tr>
-      <th>IP: mc.lambdaposting.games</th>
-    </tr>
-	<tr>
-      <th id="copybutton"><a onclick="copyIP();document.getElementById('click').play();">Copy to clipboard</a></th>
-    </tr>
-    <tr>
-      <th id="okbutton"><a onclick="hideAlertMc();document.getElementById('click').play();">Ok</a></th>
-    </tr>
-</table>
-
-<!-- website container ends here -->
+	<!-- website container ends here -->
 </div>
 </body>
