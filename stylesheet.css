@@ -1,0 +1,260 @@
+html
+	{
+	overflow-x:hidden;
+	height: 100%;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	}
+	
+	body
+	{
+	background-color: black;
+	background: url("bg.png");
+	background-size:cover;
+	}
+
+	#title1
+	{
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	padding:20px 0px;
+	animation: move 4.6s infinite linear, blink 4.6s infinite linear, blinkblur 4.6s infinite linear;
+	transform:translateX(0px);
+	letter-spacing: 10px;
+	}
+	
+	#title1 span
+	{
+	position: absolute;
+	font-size: 10px;
+	filter: blur(1px);
+	transform: scale(7) translateX(0px);
+	top: 65px;
+	animation: movescale 4.6s infinite linear, blink 4.6s infinite linear;
+	left: 400px;
+	}
+
+	#menu th
+	{
+	font-size: 20px;
+	color: #FFBA00;
+	padding-bottom:20px;
+	text-align: left;
+	font-family: Trebuchet MS;
+	width: 200px; 
+	}
+	
+	#menu td
+	{
+	font-size: 15px;
+	color: #7F7F7F;
+	padding-bottom:20px;
+	font-family: Arial;
+	vertical-align: bottom;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+	
+	a
+	{
+	cursor: default;
+	color: #FFDC68;
+	text-decoration: none;
+	opacity: 0.8;
+	filter: blur(0.7px);
+	}
+	
+	a:hover
+	{
+	color: #FFDC68;
+	text-shadow: 0px 0px 5px #FFFF3B, 0px 0px 10px #FFDC68;
+	text-decoration: none;
+	opacity: 1;
+	filter: blur(3px) saturate(8);
+	}
+	
+	a:active
+	{
+	color: #000;
+	text-shadow: 0px 0px 5px #FFFF3B, 0px 0px 10px #FFDC68;
+	text-decoration: none;
+	filter: blur(0px) saturate(8);
+	}
+		
+	a:focus
+	{
+	color: #FFDC68;
+	text-shadow: 0px 0px 5px #FFFF3B, 0px 0px 10px #FFDC68;
+	text-decoration: none;
+	opacity: 1;
+	filter: blur(3px) saturate(8);
+	}
+		
+	.inactive
+	{
+	color: #7F7F7F;
+	pointer-events: none;
+	}
+	
+	#messagebox, #messagebox_mc
+	{
+	width:360px;
+	height:160px;
+	background-color: #383838;
+	position:fixed;
+	top: 200px;
+	left: calc(50% - 160px);
+	text-align: center;
+	visibility: hidden;
+	}
+	
+	#messagebox th, #messagebox_mc th
+	{
+	color: #F0B418;
+	font-size: 18px;
+	text-shadow: 2px 2px #000;
+	letter-spacing: 4px;
+	font-family: Arial Narrow;
+	}
+	
+	#messagebox a, #messagebox_mc a
+	{
+	font-size: 16px;
+	font-family: Trebuchet MS;
+	font-weight: normal;
+	text-shadow: none;
+	letter-spacing: normal;
+	}
+	
+	#messagebox #okbutton, #messagebox_mx #okbutton
+	{
+	height: 40px;
+	}
+	
+	#messagebox a:hover, #messagebox_mc a:hover
+	{
+	color: #FFDC68;
+	text-shadow: 0px 0px 5px #FFFF3B, 0px 0px 10px #FFDC68;
+	text-decoration: none;
+	opacity: 1;
+	filter: saturate(8);
+	}
+	
+	@media screen and (max-width: 800px) {
+	
+	#title1
+	{
+	font-size: 20px;
+	padding:0px 0px;
+	animation: none;
+	}
+	
+	#title1 span
+	{
+	display:none;
+	}
+	
+	#messagebox
+	{
+	top: 100px;
+	}
+	}
+
+	/* animations */
+	/* title animation */
+	@keyframes move{
+	0%{transform:translateX(-50px);}
+	
+	27%{transform:translateX(50px);}
+	
+	36%{transform:translateX(25px);}
+	
+	45%{transform:translateX(50px);}
+	
+	81%{transform:translateX(0px);}
+	
+	94%{transform:translateX(50px);}
+	
+	100%{transform:translateX(-50px);}
+	}
+	
+	/* title scaled animation */
+	@keyframes movescale{
+	0%{transform:translateX(-50px) scale(7);}
+	
+	27%{transform:translateX(50px) scale(7);}
+	
+	36%{transform:translateX(25px) scale(7);}
+	
+	45%{transform:translateX(50px) scale(7);}
+	
+	81%{transform:translateX(0px) scale(7);}
+	
+	94%{transform:translateX(50px) scale(7);}
+	
+	100%{transform:translateX(-50px) scale(7);}
+	}
+
+	/* blinking animation */
+	@keyframes blink{
+	0%{text-shadow: none;}
+	
+	11%{text-shadow: none;}
+	12%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
+	13%{text-shadow: none;}
+	
+	31%{text-shadow: none;}
+	32%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
+	33%{text-shadow: none;}
+	
+	54%{text-shadow: none;}
+	55%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
+	56%{text-shadow: none;}
+	
+	66%{text-shadow: none;}
+	67%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
+	68%{text-shadow: none;}
+	
+	77%{text-shadow: none;}
+	78%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
+	79%{text-shadow: none;}
+	
+	93%{text-shadow: none;}
+	94%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
+	95%{text-shadow: none;}
+	
+	100%{text-shadow: none;}
+	}
+
+	/* blinking blur animation */
+	@keyframes blinkblur{
+	0%{filter:blur(0px);}
+	
+	11%{filter:blur(0px);}
+	12%{filter:blur(5px);}
+	13%{filter:blur(0px);}
+	
+	31%{filter:blur(0px);}
+	32%{filter:blur(5px);}
+	33%{filter:blur(0px);}
+	
+	54%{filter:blur(0px);}
+	55%{filter:blur(5px);}
+	56%{filter:blur(0px);}
+	
+	66%{filter:blur(0px);}
+	67%{filter:blur(5px);}
+	68%{filter:blur(0px);}
+	
+	77%{filter:blur(0px);}
+	78%{filter:blur(5px);}
+	79%{filter:blur(0px);}
+	
+	93%{filter:blur(0px);}
+	94%{filter:blur(5px);}
+	95%{filter:blur(0px);}
+	
+	100%{filter:blur(0px);}
+	}
