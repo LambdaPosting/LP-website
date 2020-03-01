@@ -1,5 +1,6 @@
 # LP-website
 A Half-Life WON menu themed website made for https://lambdaposting.games/.
+![Website screenshot](https://i.imgur.com/GLRmP8l.png)
 
 # Features:
 * Animated title
