@@ -199,7 +199,7 @@ a:focus, button:focus{
 /* title scaled animation */
 @keyframes movescale{
 	100%,0%{transform:translateX(-50px) scale(7);}
-	{transform:translateX(50px) scale(7);}
+	27%,45%,94%{transform:translateX(50px) scale(7);}
 	36%{transform:translateX(25px) scale(7);}
 	81%{transform:translateX(0px) scale(7);}
 }
