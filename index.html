@@ -16,15 +16,13 @@
 	<meta property="og:url" content="https://lambdaposting.games/index.html">
 	
 	<!-- CSS -->
-	<!-- bootstrap (only used to make the page responsive and might not be necessary in the future)-->
-	<link rel="stylesheet" href="bootstrap.min.css">
 	<!-- external stylesheet -->
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	
 	<!-- JAVASCRIPT -->
-	<!-- shortcut key script -->
-	<script src="alerts.js"></script>
 	<!-- alerts script -->
+	<script src="alerts.js"></script>
+	<!-- shortcut key script -->
 	<script src="key_shortcuts.js"></script>
 	
 	<!-- discord icon in the lower right -->
@@ -40,83 +38,85 @@
 	
 <body>
 
-<!-- click sound -->
-<audio id="click" src="click.mp3" preload="auto"></audio>
-
-<!-- website container -->
-<div class="container">
-
-	<!-- title with animation -->
-	<h1 id="title1">HλLF-LIFE LAMBDAPOSTING<span>HλLF-LIFE LAMBDAPOSTING</span></h1>
+	<!-- click sound -->
+	<audio id="click" src="click.mp3" preload="auto"></audio>
 	
-	<!-- menu contents -->
-	<table id="menu">
-		<tr>
-			<th><a href="https://discord.gg/xMkHHxt" onclick="clickSound();"><u>D</u>iscord server</a></th>
-			<td>Join our Discord server</td>
-		</tr>
-		<tr>
-			<th><a class="inactive" href="steam://connect/serverIP" onclick="clickSound();"><u>M</u>ultiplayer</a></th>
-			<td>This button becomes active when an event is taking place.</td>
-		</tr>
-		<tr>
-			<th><a onclick="showAlertMc(); clickSound();">M<u>i</u>necraft server</a></th>
-			<td>Join our Minecraft server</td>
-		</tr>
-		<tr>
-			<th><a href="https://www.facebook.com/groups/408658379533410/" onclick="clickSound();"><u>F</u>acebook group</a></th>
-			<td>Visit our Facebook group</td>
-		</tr>
-		<tr>
-			<th><a href="https://www.facebook.com/lambdaposting/" onclick="clickSound();">Facebook <u>p</u>age</a></th>
-			<td>Check out our Facebook page</td>
-		</tr>
-		<tr>
-			<th><a href="https://wiki.lambdaposting.games/" onclick="clickSound();"><u>W</u>iki</a></th>
-			<td>Check out the LambdaPosting Wiki</td>
-		</tr>
-		<tr>
-			<th><a href="https://github.com/LambdaPosting" onclick="clickSound();"><u>G</u>itHub</a></th>
-			<td>Source code for this webpage and our other projects</td>
-		</tr>
-		<tr>
-			<th><a href="https://www.patreon.com/LambdaPosting" onclick="clickSound();">Pat<u>r</u>eon</a></th>
-			<td>Support us on Patreon!</td>
-		</tr>
-		<tr>
-			<th><a onclick="showAlert();clickSound();"><u>A</u>bout</a></th>
-			<td>About this website</td>
-		</tr>
-	</table>
-
-	<!-- message box -->
-	<table id="messagebox">
-		<tr>
-			<th>Website by mirzi and Czechball</th>
-		</tr>
-		<tr>
-			<th id="githublink"><a href="https://github.com/LambdaPosting/LP-website"  onclick="clickSound();">Source code available on GitHub</a></th>
-		</tr>
-		<tr>
-			<th id="okbutton"><a onclick="hideAlert();clickSound();"><br>Ok</a></th>
-		</tr>
-	</table>
-
-	<table id="messagebox_mc">
-		<tr>
-			<th>Join our Minecraft server!</th>
-		</tr>
-		<tr>
-			<th>IP: mc.lambdaposting.games</th>
-		</tr>
-		<tr>
-			<th id="copybutton"><a onclick="copyIP();clickSound();">Copy to clipboard</a></th>
-		</tr>
-		<tr>
-			<th id="okbutton"><a onclick="hideAlertMc();clickSound();">Ok</a></th>
-		</tr>
-	</table>
-
-	<!-- website container ends here -->
-</div>
+	<!-- website container -->
+	<div class="container">
+	
+		<!-- title with animation -->
+		<h1 id="title1">HλLF-LIFE LAMBDAPOSTING<span>HλLF-LIFE LAMBDAPOSTING</span></h1>
+		
+		<!-- menu contents -->
+		<table id="menu">
+			<tr>
+				<th><a href="https://discord.gg/xMkHHxt" onclick="clickSound();"><u>D</u>iscord server</a></th>
+				<td>Join our Discord server</td>
+			</tr>
+			<tr>
+				<!-- steam IP href example: steam://connect/serverIP -->
+				<!-- otherwise leave it empty as it can still be selected with Tab -->
+				<th><a class="inactive" href="" onclick="clickSound();"><u>M</u>ultiplayer</a></th>
+				<td>This button becomes active when an event is taking place.</td>
+			</tr>
+			<tr>
+				<th><button onclick="showAlertMc(); clickSound();">M<u>i</u>necraft server</a></th>
+				<td>Join our Minecraft server</td>
+			</tr>
+			<tr>
+				<th><a href="https://www.facebook.com/groups/408658379533410/" onclick="clickSound();"><u>F</u>acebook group</a></th>
+				<td>Visit our Facebook group</td>
+			</tr>
+			<tr>
+				<th><a href="https://www.facebook.com/lambdaposting/" onclick="clickSound();">Facebook <u>p</u>age</a></th>
+				<td>Check out our Facebook page</td>
+			</tr>
+			<tr>
+				<th><a href="https://wiki.lambdaposting.games/" onclick="clickSound();"><u>W</u>iki</a></th>
+				<td>Check out the LambdaPosting Wiki</td>
+			</tr>
+			<tr>
+				<th><a href="https://github.com/LambdaPosting" onclick="clickSound();"><u>G</u>itHub</a></th>
+				<td>Source code for this webpage and our other projects</td>
+			</tr>
+			<tr>
+				<th><a href="https://www.patreon.com/LambdaPosting" onclick="clickSound();">Pat<u>r</u>eon</a></th>
+				<td>Support us on Patreon!</td>
+			</tr>
+			<tr>
+				<th><button onclick="showAlert();clickSound();"><u>A</u>bout</a></th>
+				<td>About this website</td>
+			</tr>
+		</table>
+	
+		<!-- message box -->
+		<table id="messagebox">
+			<tr>
+				<th>Website by mirzi and Czechball</th>
+			</tr>
+			<tr>
+				<th id="githublink"><a href="https://github.com/LambdaPosting/LP-website" onclick="clickSound();">Source code available on GitHub</a></th>
+			</tr>
+			<tr>
+				<th id="okbutton"><button onclick="hideAlert();clickSound();"><br>Ok</a></th>
+			</tr>
+		</table>
+	
+		<table id="messagebox_mc">
+			<tr>
+				<th>Join our Minecraft server!</th>
+			</tr>
+			<tr>
+				<th>IP: mc.lambdaposting.games</th>
+			</tr>
+			<tr>
+				<th id="copybutton"><button onclick="copyIP();clickSound();">Copy to clipboard</a></th>
+			</tr>
+			<tr>
+				<th id="okbutton"><button onclick="hideAlertMc();clickSound();">Ok</a></th>
+			</tr>
+		</table>
+	
+		<!-- website container ends here -->
+	</div>
 </body>

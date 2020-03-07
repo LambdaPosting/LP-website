@@ -1,7 +1,6 @@
 /* don't mind the duct tape */
 
-html
-{
+html{
 	overflow-x:hidden;
 	height: 100%;
 	-webkit-user-select: none; /* Safari */        
@@ -10,16 +9,15 @@ html
 	user-select: none; /* Standard */
 }
 
-body
-{
+body{
 	background-color: black;
 	background: url("bg.png");
 	background-size:cover;
+	font-family: Arial;
 }
 
 /* title text */
-#title1
-{
+#title1{
 	font-size: 50px;
 	text-align: center;
 	color: white;
@@ -27,11 +25,11 @@ body
 	animation: move 4.6s infinite linear, blink 4.6s infinite linear, blinkblur 4.6s infinite linear;
 	transform:translateX(0px);
 	letter-spacing: 10px;
+	line-height: 1.4;
 }
 
 /* title blurry text */
-#title1 span
-{
+#title1 span{
 	position: absolute;
 	font-size: 10px;
 	filter: blur(1px);
@@ -42,38 +40,40 @@ body
 }
 
 /* menu button */
-#menu th
-{
-	font-size: 20px;
+#menu th{
 	color: #FFBA00;
-	padding-bottom:20px;
+	padding-bottom:22px;
 	text-align: left;
-	font-family: Trebuchet MS;
 	width: 200px; 
 }
 
 /* menu button description */
-#menu td
-{
+#menu td{
 	font-size: 15px;
 	color: #7F7F7F;
-	padding-bottom:20px;
-	font-family: Arial;
+	padding-bottom:22px;
 	vertical-align: bottom;
 }
 
-/* links */
-a
-{
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* links and buttons */
+a, button{
 	cursor: default;
 	color: #FFBA00;
 	text-decoration: none;
 	transition-duration: 1s;
+	font-family: Trebuchet MS;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 /* link hover */
-a:hover
-{
+a:hover, button:hover{
 	color: #FFF94D;
 	text-shadow: 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 15px #FFBA00;
 	text-decoration: none;
@@ -81,32 +81,29 @@ a:hover
 }
 
 /* link active (clicked) */
-a:active
-{
+a:active, button:active{
 	color: #000;
 	text-decoration: none;
 	transition-duration: 0.02s;
 }
 
 /* fix for ugly blue links */
-a:focus
-{
+a:focus, button:focus{
 	color: #000;
 	text-shadow: 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 15px #FFBA00;
 	text-decoration: none;
 	transition-duration: 0.02s;
+	outline:0;
 }
 
 /* inactive link */
-.inactive
-{
+.inactive{
 	color: #7F7F7F;
 	pointer-events: none;
 }
 
 /* message box container */
-#messagebox, #messagebox_mc
-{
+#messagebox, #messagebox_mc{
 	width:320px;
 	height:160px;
 	background-color: #383838;
@@ -123,7 +120,7 @@ a:focus
 #messagebox th, #messagebox_mc th{font-size: 18px;}
 
 /* message box link */
-#messagebox a, #messagebox_mc a
+#messagebox a, #messagebox_mc a, #messagebox button, #messagebox_mc button
 {
 	font-size: 16px;
 	font-family: Trebuchet MS;
@@ -132,20 +129,51 @@ a:focus
 
 /* css for mobile devices */
 @media screen and (max-width: 800px) {
-
-/* smaller title without and animation */
-#title1
-{
-	font-size: 20px;
-	padding:0px 0px;
-	animation: none;
+	
+	/* smaller title without and animation */
+	#title1
+	{
+		font-size: 20px;
+		padding:0px 0px;
+		animation: none;
+	}
+	
+	/* disable blurry title */
+	#title1 span{display:none;}
+	
+	/* move message box higher */
+	#messagebox, #messagebox_mc{top: 100px;}
 }
 
-/* disable blurry title */
-#title1 span{display:none;}
+/* responsive web stuff */
+@media (min-width:768px) {
+    .container {
+        width: 750px
+    }
+}
 
-/* move message box higher */
-#messagebox, #messagebox_mc{top: 100px;}
+@media (min-width:992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px
+    }
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* animations */
