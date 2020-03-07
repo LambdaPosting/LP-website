@@ -36,7 +36,7 @@
 	
 </head>
 	
-<body>
+<body onload="hideAlert();">
 
 	<!-- click sound -->
 	<audio id="click" src="click.mp3" preload="auto"></audio>
@@ -54,10 +54,13 @@
 				<td>Join our Discord server</td>
 			</tr>
 			<tr>
-				<!-- steam IP href example: steam://connect/serverIP -->
-				<!-- otherwise leave it empty as it can still be selected with Tab -->
-				<th><a class="inactive" href="" onclick="clickSound();"><u>M</u>ultiplayer</a></th>
+			
+				<!-- Multiplayer button now displays a message box that can be changed below -->
+				<!-- Make sure to also change class from inactive to active -->
+				<th><a class="inactive" onclick="clickSound();showAlertEvent();"><u>M</u>ultiplayer</a></th>
 				<td>This button becomes active when an event is taking place.</td>
+				<script>var eventTitle = "Join our HLDM Event!"; var eventIP = "127.0.0.1";</script>
+				
 			</tr>
 			<tr>
 				<th><button onclick="showAlertMc(); clickSound();">M<u>i</u>necraft server</a></th>
@@ -91,29 +94,20 @@
 	
 		<!-- message box -->
 		<table id="messagebox">
+			<!-- about -->
+			<!-- Most message box edits are now done in alerts.js -->
 			<tr>
-				<th>Website by mirzi and Czechball</th>
+				<th id="line1">Line 1</th>
+			</tr>
+			<tr id="line2">
+				<th>Line 2</th>
 			</tr>
 			<tr>
 				<th id="githublink"><a href="https://github.com/LambdaPosting/LP-website" onclick="clickSound();">Source code available on GitHub</a></th>
-			</tr>
-			<tr>
-				<th id="okbutton"><button onclick="hideAlert();clickSound();"><br>Ok</a></th>
-			</tr>
-		</table>
-	
-		<table id="messagebox_mc">
-			<tr>
-				<th>Join our Minecraft server!</th>
-			</tr>
-			<tr>
-				<th>IP: mc.lambdaposting.games</th>
-			</tr>
-			<tr>
 				<th id="copybutton"><button onclick="copyIP();clickSound();">Copy to clipboard</a></th>
 			</tr>
 			<tr>
-				<th id="okbutton"><button onclick="hideAlertMc();clickSound();">Ok</a></th>
+				<th id="okbutton"><button onclick="hideAlert();clickSound();"><br>Ok</a></th>
 			</tr>
 		</table>
 	

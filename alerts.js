@@ -1,45 +1,53 @@
-//alert box script
+//i know it looks like yandev made this but it works
 
+var IP = ""; //ignore this
+//about
 function showAlert() {
-	var x = document.getElementById("messagebox");
-	var y = document.getElementById("githublink");
-	var z = document.getElementById("okbutton");
-	x.style.visibility = "visible";
-	y.style.display = "inline";
-	z.style.display = "inline";
-}
-	
-function hideAlert() {
-	var x = document.getElementById("messagebox");
-	var y = document.getElementById("githublink");
-	var z = document.getElementById("okbutton");
-	x.style.visibility = "hidden";
-	y.style.display = "none";
-	z.style.display = "none";
+	hideAlert();
+	document.getElementById("messagebox").style.visibility = "visible";
+	document.getElementById("line1").style.display = "inline";
+	document.getElementById("line1").innerHTML = "<br>Website by mirzi and Czechball";
+	document.getElementById("githublink").style.display = "inline";
+	document.getElementById("okbutton").display = "inline";
 }
 
-//minecraft alert box
-
+//minecraft server info
 function showAlertMc() {
-	var x = document.getElementById("messagebox_mc");
-	var y = document.getElementById("copybutton");
-	var z = document.getElementById("okbutton");
-	x.style.visibility = "visible";
-	y.style.display = "inline";
-	z.style.display = "inline";
-	}
-	
-function hideAlertMc() {
-	var x = document.getElementById("messagebox_mc");
-	var y = document.getElementById("copybutton");
-	var z = document.getElementById("okbutton");
-	x.style.visibility = "hidden";
-	y.style.display = "none";
-	z.style.display = "none";
+	hideAlert();
+	document.getElementById("messagebox").style.visibility = "visible";
+	document.getElementById("line1").style.display = "inline";
+	document.getElementById("line1").innerHTML = "<br>Join our minecraft server!";
+	document.getElementById("line2").style.display = "inline";
+	IP = "mc.lambdaposting.games";
+	document.getElementById("line2").innerHTML = "IP: " +IP;
+	document.getElementById("copybutton").style.display = "inline";
+	document.getElementById("okbutton").display = "inline";
 }
 
-//copy minecraft IP
+//event info
+function showAlertEvent() {
+	hideAlert();
+	document.getElementById("messagebox").style.visibility = "visible";
+	document.getElementById("line1").style.display = "inline";
+	document.getElementById("line1").innerHTML = "<br>" + eventTitle;
+	IP = eventIP;
+	document.getElementById("line2").style.display = "inline";
+	document.getElementById("line2").innerHTML = "IP: " +IP;
+	document.getElementById("copybutton").style.display = "inline";
+	document.getElementById("okbutton").display = "inline";
+}
+
+//hide all - runs on page load
+function hideAlert() {
+	document.getElementById("messagebox").style.visibility = "hidden";
+	document.getElementById("line1").style.display = "none";
+	document.getElementById("line2").style.display = "none";
+	document.getElementById("githublink").style.display = "none";
+	document.getElementById("copybutton").style.display = "none";
+	document.getElementById("okbutton").display = "none";
+}
+
+//copy string "IP" to clipboard
 function copyIP(){
-	var text = "mc.lambdaposting.games";
-	navigator.clipboard.writeText(text);
+	navigator.clipboard.writeText(IP);
 }

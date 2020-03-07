@@ -102,8 +102,19 @@ a:focus, button:focus{
 	pointer-events: none;
 }
 
+/* active link */
+.active{
+	color: #FFFFFF;
+	animation: activeblink 0.5s infinite linear;
+}
+
+.active:hover{
+	animation: none;
+}
+
+
 /* message box container */
-#messagebox, #messagebox_mc{
+#messagebox{
 	width:320px;
 	height:160px;
 	background-color: #383838;
@@ -114,25 +125,25 @@ a:focus, button:focus{
 	text-align: center;
 	color: #FFBA00;
 	visibility: hidden;
+	font-size: 16px;
 }
 
 /* message box message */
-#messagebox th, #messagebox_mc th{font-size: 18px;}
+#messagebox th th{font-size: 18px;}
 
 /* message box link */
-#messagebox a, #messagebox_mc a, #messagebox button, #messagebox_mc button
-{
+#messagebox a, #messagebox button{
 	font-size: 16px;
 	font-family: Trebuchet MS;
 	font-weight: normal;
 }
 
+#messagebox #line1{font-size: 18px;}
+
 /* css for mobile devices */
-@media screen and (max-width: 800px) {
-	
+@media screen and (max-width: 800px){
 	/* smaller title without and animation */
-	#title1
-	{
+	#title1{
 		font-size: 20px;
 		padding:0px 0px;
 		animation: none;
@@ -142,7 +153,7 @@ a:focus, button:focus{
 	#title1 span{display:none;}
 	
 	/* move message box higher */
-	#messagebox, #messagebox_mc{top: 100px;}
+	#messagebox{top: 100px;}
 }
 
 /* responsive web stuff */
@@ -179,96 +190,33 @@ a:focus, button:focus{
 /* animations */
 /* title animation */
 @keyframes move{
-	0%{transform:translateX(-50px);}
-	
-	27%{transform:translateX(50px);}
-	
+	100%,0%{transform:translateX(-50px);}
+	27%,45%,94%{transform:translateX(50px);}
 	36%{transform:translateX(25px);}
-	
-	45%{transform:translateX(50px);}
-	
 	81%{transform:translateX(0px);}
-	
-	94%{transform:translateX(50px);}
-	
-	100%{transform:translateX(-50px);}
 }
 
 /* title scaled animation */
 @keyframes movescale{
-	0%{transform:translateX(-50px) scale(7);}
-	
-	27%{transform:translateX(50px) scale(7);}
-	
+	100%,0%{transform:translateX(-50px) scale(7);}
+	{transform:translateX(50px) scale(7);}
 	36%{transform:translateX(25px) scale(7);}
-	
-	45%{transform:translateX(50px) scale(7);}
-	
 	81%{transform:translateX(0px) scale(7);}
-	
-	94%{transform:translateX(50px) scale(7);}
-	
-	100%{transform:translateX(-50px) scale(7);}
 }
 
 /* blinking animation */
 @keyframes blink{
-	0%{text-shadow: none;}
-	
-	11%{text-shadow: none;}
-	12%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	13%{text-shadow: none;}
-	
-	31%{text-shadow: none;}
-	32%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	33%{text-shadow: none;}
-	
-	54%{text-shadow: none;}
-	55%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	56%{text-shadow: none;}
-	
-	66%{text-shadow: none;}
-	67%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	68%{text-shadow: none;}
-	
-	77%{text-shadow: none;}
-	78%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	79%{text-shadow: none;}
-	
-	93%{text-shadow: none;}
-	94%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
-	95%{text-shadow: none;}
-	
-	100%{text-shadow: none;}
+	0%,100%,11%,13%,31%,33%,54%,56%,66%,68%,77%,79%,93%,95%,100%{text-shadow: none;}
+	12%,32%,55%,67%,78%,94%{text-shadow: 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF, 0px 0px 5px #FFF;}
 }
 
 /* blinking blur animation */
 @keyframes blinkblur{
-	0%{filter:blur(0px);}
-	
-	11%{filter:blur(0px);}
-	12%{filter:blur(5px);}
-	13%{filter:blur(0px);}
-	
-	31%{filter:blur(0px);}
-	32%{filter:blur(5px);}
-	33%{filter:blur(0px);}
-	
-	54%{filter:blur(0px);}
-	55%{filter:blur(5px);}
-	56%{filter:blur(0px);}
-	
-	66%{filter:blur(0px);}
-	67%{filter:blur(5px);}
-	68%{filter:blur(0px);}
-	
-	77%{filter:blur(0px);}
-	78%{filter:blur(5px);}
-	79%{filter:blur(0px);}
-	
-	93%{filter:blur(0px);}
-	94%{filter:blur(5px);}
-	95%{filter:blur(0px);}
-	
-	100%{filter:blur(0px);}
+	0%,100%,11%,13%,31%,33%,54%,56%,66%,68%,77%,79%,93%,95%,100%{filter:blur(0px);}
+	12%,32%,55%,67%,78%,94%{filter:blur(5px);}
+}
+
+@keyframes activeblink{
+	0%{color: #FFFFFF; text-shadow:0px 0px 10px #FFFFFF,0px 0px 10px #FFFFFF,0px 0px 10px #FFFFFF}
+	100%{color: #FFFFFF;}
 }
