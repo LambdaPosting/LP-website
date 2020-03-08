@@ -157,7 +157,6 @@ button:focus{
 	font-weight: bold;
 	font-size: 25px;
 	text-shadow: 0px 2px 2px black;
-	column-width: 50%;
 }
 
 #serverbrowser .sb_info{
@@ -201,16 +200,15 @@ button:focus{
 		left:0px;
 		margin: 5px;
 	}
-	#serverbrowser .sc_name{
+	#serverbrowser .sb_name{
 		font-size:17px;
 		column-width: 170px;
 		padding-left: 10px;
 	}
-	#serverbrowser .sc_info{
+	#serverbrowser .sb_info{
 		font-size:15px;
-		column-width: 70%;
 	}
-	#serverbrowser .sc_copyIP{
+	#serverbrowser .sb_copyIP{
 	font-weight: bold;
 	text-align: right;
 	padding-right: 10px;
