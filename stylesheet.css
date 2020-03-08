@@ -29,7 +29,7 @@ body{
 }
 
 /* title blurry text */
-#title1 span{
+#title1 #blink{
 	position: absolute;
 	font-size: 10px;
 	filter: blur(1px);
@@ -88,30 +88,12 @@ a:active, button:active{
 }
 
 /* fix for ugly blue links */
-a:focus, button:focus{
-	color: #000;
-	text-shadow: 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 5px #FFBA00, 0px 0px 15px #FFBA00;
-	text-decoration: none;
-	transition-duration: 0.02s;
+button:focus{
 	outline:0;
+	background: none;
+	border: none;
+	padding: 0;
 }
-
-/* inactive link */
-.inactive{
-	color: #7F7F7F;
-	pointer-events: none;
-}
-
-/* active link */
-.active{
-	color: #FFFFFF;
-	animation: activeblink 0.5s infinite linear;
-}
-
-.active:hover{
-	animation: none;
-}
-
 
 /* message box container */
 #messagebox{
@@ -124,8 +106,9 @@ a:focus, button:focus{
 	left: calc(50% - 160px);
 	text-align: center;
 	color: #FFBA00;
-	visibility: hidden;
+	display:none;
 	font-size: 16px;
+	box-shadow: 0px 3px 10px #000;
 }
 
 /* message box message */
@@ -140,8 +123,66 @@ a:focus, button:focus{
 
 #messagebox #line1{font-size: 18px;}
 
+#serverbrowser{
+	width:650px;
+	background-color: #383838;
+	border: 1px solid #646464;
+	position:fixed;
+	top: 200px;
+	left: calc(50% - 325px);
+	color: #FFBA00;
+	font-size: 16px;
+	font-family: Trebuchet MS;
+	display:none;
+	box-shadow: 0px 3px 10px #000;
+}
+
+#serverbrowser .sb_name{
+	padding-left: 40px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 25px;
+	text-shadow: 0px 2px 2px black;
+	column-width: 225px;
+	background-size: cover;
+}
+
+#serverbrowser tr{
+	height: 100px;
+}
+
+#serverbrowser .sb_name{
+	padding-left: 40px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 25px;
+	text-shadow: 0px 2px 2px black;
+	column-width: 50%;
+}
+
+#serverbrowser .sb_info{
+	column-width: 200px;
+}
+
+#serverbrowser .sb_copyIP{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 40px;
+}
+
+/* inactive option */
+#serverbrowser .inactive{
+	display:none;
+}
+
+/* active option */
+#serverbrowser .active{
+	animation: activeblink 1s infinite linear;
+}
+
 /* css for mobile devices */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 650px){
 	/* smaller title without and animation */
 	#title1{
 		font-size: 20px;
@@ -154,12 +195,32 @@ a:focus, button:focus{
 	
 	/* move message box higher */
 	#messagebox{top: 100px;}
+	#serverbrowser{
+		width: calc(100% - 10px);
+		top:70px;
+		left:0px;
+		margin: 5px;
+	}
+	#serverbrowser .sc_name{
+		font-size:17px;
+		column-width: 170px;
+		padding-left: 10px;
+	}
+	#serverbrowser .sc_info{
+		font-size:15px;
+		column-width: 70%;
+	}
+	#serverbrowser .sc_copyIP{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 10px;
+}
 }
 
 /* responsive web stuff */
 @media (min-width:768px) {
     .container {
-        width: 750px
+        width: 750px;
     }
 }
 
@@ -217,6 +278,6 @@ a:focus, button:focus{
 }
 
 @keyframes activeblink{
-	0%{color: #FFFFFF; text-shadow:0px 0px 10px #FFFFFF,0px 0px 10px #FFFFFF,0px 0px 10px #FFFFFF}
-	100%{color: #FFFFFF;}
+	0%, 100%{box-shadow: 0px 0px 5px #FFBA00;}
+	50%{box-shadow: 0px 0px 20px #FFBA00;}
 }

@@ -1,15 +1,13 @@
 // shortcut key script
 
 addEventListener('keyup', function(e) { 
-	document.getElementById('click').play();
+	clickSound();
 	//D - Discord
 	if (e.keyCode == 68) location='https://discord.gg/xMkHHxt';
-	//M - Multiplayer - activate only on events
-	//addEventListener('keyup', function(e) { if (e.keyCode == 77) location='placeholder'});
-	//I - Minecraft server dialog
-	if (e.keyCode == 73) showAlertMc();
+	//M - Multiplayer - show server browser
+	if (e.keyCode == 77) showServerBrowser();
 	//ESC - Close the Minecraft server dialog
-	if (e.keyCode == 27) hideAlertMc();
+	if (e.keyCode == 27) hideServerBrowser();
 	//F - Facebook group
 	if (e.keyCode == 70) location='https://www.facebook.com/groups/408658379533410/';
 	//P - Facebook page
