@@ -17,12 +17,12 @@ For the index page to function properly you'll need:
 | --------  | ----------- |
 | alerts.js | Alerts script |
 | bg.png | Background image |
-| bootstrap.min.css | Bootstrap grid system |
 | click.mp3 | Click sound that's played when a button or link is clicked |
 | favicon.png | Website icon |
 | index.html | The page itself |
 | key_shortcuts.js | Key shortcuts script |
 | lambdaposting.jpg | Image used in Open Graph tags |
+| sb-*** | Server browser images |
 | stylesheet.css | Stylesheet for index page |
 
 The rest is used for the error pages:
