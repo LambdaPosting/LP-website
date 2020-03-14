@@ -22,6 +22,7 @@ For the index page to function properly you'll need:
 | index.html | The page itself |
 | key_shortcuts.js | Key shortcuts script |
 | lambdaposting.jpg | Image used in Open Graph tags |
+| mc-player-counter.min.js | Minecraft server status script |
 | sb-*** | Server browser images |
 | stylesheet.css | Stylesheet for index page |
 
