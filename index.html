@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
-	
 	<!-- META TAGS -->
 	<title>Half-Life LambdaPosting</title>
 	<meta charset="UTF-8">
@@ -24,6 +22,8 @@
 	<script src="alerts.js"></script>
 	<!-- shortcut key script -->
 	<script src="key_shortcuts.js"></script>
+	<!-- minecraft player counter script -->
+	<script src="mc-player-counter.min.js"></script>
 	
 	<!-- discord icon in the lower right -->
 	<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
@@ -33,11 +33,9 @@
 		shard: 'https://disweb.dashflo.net'
   		})
 	</script>
-	
 </head>
 	
-<body onload="hideAlert();">
-
+<body>
 	<!-- click sound -->
 	<audio id="click" src="click.mp3" preload="auto"></audio>
 	
@@ -87,7 +85,10 @@
 		<table id="serverbrowser" cellspacing="0" cellpadding="0">
 			<tr style="background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url(sb-mc.png);">
 				<td class="sb_name">Minecraft</td>
-				<td class="sb_info">Server info is unavailable</td>
+				<td class="sb_info">
+				Status: <span data-playercounter-ip="mc.lambdaposting.games" data-playercounter-status>?</span><br>
+				Players: <span data-playercounter-ip="mc.lambdaposting.games" data-playercounter-format="{online}/{max}">?</span>
+				</td>
 				<td class="sb_copyIP"><button onclick="copyIP('mc.lambdaposting.games');clickSound();hideServerBrowser();">Copy IP</button></td>
 			</tr>
 			<tr style="background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url(sb-aos.png);">
