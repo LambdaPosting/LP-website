@@ -1,130 +1,104 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-	<!-- META TAGS -->
-	<title>Half-Life LambdaPosting</title>
+	<!-- meta tags -->
+	<title>Hλlf-Life Lambdaposting</title>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="The official LambdaPosting website">
-	<meta name="keywords" content="Half-Life,lambdaposting,discord">
 	<meta property="og:title" content="Half-Life LambdaPosting">
 	<meta property="og:description" content="The official LambdaPosting website">
 	<meta property="og:image" content="https://lambdaposting.games/lambdaposting.jpg">
 	<meta property="og:url" content="https://lambdaposting.games/index.html">
 	
-	<!-- CSS -->
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="bootstrap.min.css">
 	<!-- external stylesheet -->
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	
-	<!-- JAVASCRIPT -->
-	<!-- alerts script -->
-	<script src="alerts.js"></script>
 	<!-- shortcut key script -->
 	<script src="key_shortcuts.js"></script>
-	<!-- minecraft player counter script -->
-	<script src="mc-player-counter.min.js"></script>
+	<!-- alerts script -->
+	<script src="alerts.js"></script>
 	
-	<!-- discord icon in the lower right -->
+	<!-- discord thingy script -->
 	<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-		new Crate({
-		server:	'302903220685242368',
-		channel:'481141299718782977',
-		shard: 'https://disweb.dashflo.net'
-  		})
+	new Crate({
+    server:	'302903220685242368',
+    channel:'481141299718782977',
+    shard: 'https://disweb.dashflo.net'
+  			})
 	</script>
 </head>
 	
 <body>
-	<!-- click sound -->
-	<audio id="click" src="click.mp3" preload="auto"></audio>
-	
-	<!-- website container -->
-	<div class="container">
-	
-		<!-- title with animation -->
-		<h1 id="title1">HALF-LIFE LAMBDAPOSTING<span id="blink">HλLF-LIFE LAMBDAPOSTING</span></h1>
-		
-		<!-- menu contents -->
-		<table id="menu">
-			<tr>
-				<th><a class="inactive" href="" onclick="clickSound();"><u>D</u>iscord server (Coming Soon)</a></th>
-				<td>Join our Discord server</td>
-			</tr>
-			<tr>
-				<th><button onclick="showServerBrowser(); clickSound();"><u>M</u>ultiplayer</a></th>
-				<td>Show the server browser</td>
-			</tr>
-			<tr>
-				<th><a href="https://www.facebook.com/groups/408658379533410/" onclick="clickSound();"><u>F</u>acebook group</a></th>
-				<td>Visit our Facebook group</td>
-			</tr>
-			<tr>
-				<th><a href="https://www.facebook.com/lambdaposting/" onclick="clickSound();">Facebook <u>p</u>age</a></th>
-				<td>Check out our Facebook page</td>
-			</tr>
-			<tr>
-				<th><a href="https://wiki.lambdaposting.games/" onclick="clickSound();"><u>W</u>iki</a></th>
-				<td>Check out the LambdaPosting Wiki</td>
-			</tr>
-			<tr>
-				<th><a href="https://github.com/LambdaPosting" onclick="clickSound();"><u>G</u>itHub</a></th>
-				<td>Source code for this webpage and our other projects</td>
-			</tr>
-			<tr>
-				<th><a href="https://www.patreon.com/LambdaPosting" onclick="clickSound();">Pat<u>r</u>eon</a></th>
-				<td>Support us on Patreon!</td>
-			</tr>
-			<tr>
-				<th><button onclick="showAlert();clickSound();"><u>A</u>bout</a></th>
-				<td>About this website</td>
-			</tr>
-		</table>
-		
-		<!-- server browser -->
-		<table id="serverbrowser" cellspacing="0" cellpadding="0">
-			<tr style="background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url(sb-mc.png);">
-				<td class="sb_name">Minecraft</td>
-				<td class="sb_info">
-				Status: <span data-playercounter-ip="mc.lambdaposting.games" data-playercounter-status>?</span><br>
-				Players: <span data-playercounter-ip="mc.lambdaposting.games" data-playercounter-format="{online}/{max}">?</span>
-				</td>
-				<td class="sb_copyIP"><button onclick="copyIP('mc.lambdaposting.games');clickSound();hideServerBrowser();">Copy IP</button></td>
-			</tr>
-			<tr style="background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url(sb-aos.png);">
-				<td class="sb_name">Ace of Spades</td>
-				<td class="sb_info">Server info is unavailable</td>
-				<td class="sb_copyIP"><a href="aos://538338905:32887:0.75" onclick="clickSound();hideServerBrowser();">Connect</a></td>
-			</tr>
-			<!-- changing class="inactive" to class="active" displays the event option with a glow-->
-			<tr class="inactive" style="background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url(sb-hldm.png);">
-				<td class="sb_name">Event (HLDM)</td>
-				<td class="sb_info">Server info is unavailable</td>
-				<td class="sb_copyIP"><button onclick="copyIP('127.0.0.1');clickSound();hideServerBrowser();">Copy IP</button></td><!-- this td needs to be removed for the server browser to not break -->
-				<!-- <a href="steam://connect/" onclick="clickSound();hideServerBrowser();"><br>Connect</a></td> -->
-				<!-- Uncomment and remove </td> mentioned above if you want a direct connect button -->
-			</tr>
-		</table>
-		
-		<!-- message box -->
-		<table id="messagebox">
-			<!-- about -->
-			<!-- Most message box edits are now done in alerts.js -->
-			<tr>
-				<th id="line1">Line 1</th>
-			</tr>
-			<tr id="line2">
-				<th>Line 2</th>
-			</tr>
-			<tr>
-				<th id="githublink"><a href="https://github.com/LambdaPosting/LP-website" onclick="clickSound();">Source code available on GitHub</a></th>
-				<th id="copybutton"><button onclick="copyIP();clickSound();">Copy to clipboard</a></th>
-			</tr>
-			<tr>
-				<th id="okbutton"><button onclick="hideAlert();clickSound();"><br>Ok</a></th>
-			</tr>
-		</table>
-	
-		<!-- website container ends here -->
-	</div>
+
+<!-- click sound -->
+<audio id="click" src="click.mp3" preload="auto"></audio>
+
+<!-- website container -->
+<div class="container">
+
+<!-- title with animation -->
+<center>
+<br><br>
+<img src="title.png">
+<br><br>
+
+<!-- menu contents -->
+
+      <a href="https://discord.gg/xMkHHxt" onclick="clickSound();"><div class="button">Discord server</div></a>
+
+	  <!--               duct tape quirk - inactive is mentioned twice         -->
+	  <!--          v                                                    v     -->
+      <a class="inactive" href="https://www.lambdaposting.games/" onclick="clickSound();"><div class="button inactive">Multiplayer</div></a>
+
+	  <a onclick="showAlertMc();clickSound();"><div class="button">Minecraft server</div></a>
+
+      <a href="https://www.facebook.com/groups/408658379533410/" onclick="clickSound();"><div class="button">Facebook group</div></a>
+
+      <a href="https://www.facebook.com/lambdaposting/" onclick="clickSound();"><div class="button">Facebook page</div></a>
+
+      <a href="https://wiki.lambdaposting.games/" onclick="clickSound();"><div class="button">Wiki</div></a>
+
+      <a href="https://github.com/LambdaPosting" onclick="clickSound();"><div class="button">GitHub</div></a>
+
+      <a href="https://www.patreon.com/LambdaPosting" onclick="clickSound();"><div class="button">Patreon</div></a>
+
+      <a onclick="showAlert();clickSound();"><div class="button">About</div></a>
+
+
+<!-- message box -->
+<table id="messagebox">
+    <tr>
+	<th>April fools!<br>Website by mirzi and Czechball</th>
+	</tr>
+    <tr>
+    	<th id="githublink"><a href="https://github.com/LambdaPosting/LP-website"  onclick="clickSound();">Source code available on GitHub</a></th>
+    </tr>
+    <tr>
+      <th id="okbutton"><a onclick="hideAlert();clickSound();">Ok</a></th>
+    </tr>
+</table>
+
+</table>
+
+<table id="messagebox_mc">
+    <tr>
+      <th>Join our Minecraft server!</th>
+    </tr>
+    <tr>
+      <th>IP: mc.lambdaposting.games</th>
+    </tr>
+	<tr>
+      <th id="copybutton"><a onclick="copyIP();clickSound();">Copy to clipboard</a></th>
+    </tr>
+    <tr>
+      <th id="okbutton"><a onclick="hideAlertMc();clickSound();">Ok</a></th>
+    </tr>
+</table>
+
+<!-- website container ends here -->
+</div>
 </body>
