@@ -1,5 +1,6 @@
 # LP-website
-A Half-Life WON menu themed website made for http://lambda.zonc.eu/
+A Half-Life WON menu themed website made for ~~http://lambda.zonc.eu/~~ currently not online, available on the [Wayback Machine](https://web.archive.org/web/20200711162527/https://lambdaposting.games/)
+
 ![Website screenshot](https://i.imgur.com/GLRmP8l.png)
 
 # Features:
